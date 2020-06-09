@@ -1,0 +1,34 @@
+{
+	"transform": {
+		"default": [154992],
+		"type1": [-48],
+		"type2": [155138],
+		"type3": [4550]
+	},
+	"mysql": {
+		"insert": true,
+		"load": {
+			"url": "jdbc:mysql://localhost:3306",
+			"driver": "com.mysql.cj.jdbc.Driver",
+			"dbtable": "databasename",
+			"user": "user",
+			"password": "password"
+		},
+		"save": {
+			"url": "jdbc:mysql://localhost:3306",
+			"driver": "com.mysql.cj.jdbc.Driver",
+			"dbtable": "databasename",
+			"user": "user",
+			"password": "password"
+		}
+	},
+	"file": {
+		"write": false,
+		"load": {
+			"path": "hdfs:////yyyymm=201906/*.parquet"
+		},
+		"save": {
+			"path": "loaded_data"
+		}
+	}
+}
